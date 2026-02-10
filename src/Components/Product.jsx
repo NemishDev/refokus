@@ -1,10 +1,11 @@
 import React from "react"
 import Button from "../Components/Button"
 
-function Product({ val }) {
+
+function Product({ val , mover , count}) {
   return (
-    <div className="w-full py-20 text-white">
-      <div className="max-w-screen-xl mx-auto flex items-center justify-between">
+    <div className="w-full py-20 text-white h-[23rem]">
+      <div onMouseEnter={()=>{mover(count)}} className="max-w-screen-xl mx-auto flex items-center justify-between">
         <h1 className="text-6xl capitalize font-medium">
           {val.title}
         </h1>
@@ -25,5 +26,5 @@ function Product({ val }) {
 }
 
 export default Product;
-
+// jab bhi parent component mai kuch change karna ho child comp mai kuch hona ki vaja se to function ya method ko parent component mai banaiya unhe props ke through udhar bhej dijiye or udhar chala dijiye
 
